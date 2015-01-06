@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta charset="utf-8">
+   <meta name="description" content="Ch. 1 End: Head First jQuery, 2nd Edition">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!--
+    Copyright (c) 2014 by Ryan Benedetti and Ronan Cranley for Head First jQuery, 2nd Ed.
+   -->
+   <!-- The jQuery library-->
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+
+   <!-- The Bootstrap CSS framework v.3 for responsiveness -->
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+   <title>Furry Friends Campaign</title>
+   <!-- Your custom style sheet is linked here. -->
+   <link href="css/my_style.css" rel="stylesheet" type="text/css">
+
+  </head>
+  <body >
+  
+   <div class="container">
+
+    <div class="row top-block">
+      <div class="col-md-12">
+        <h1>Furry Friends  <span>of the week</span></h1>
+      </div>
+      <div class="top-block col-md-12">
+        <p class="lead">Click the "Show Me" buttons below to find out more about our Fabulous Furry Friends.</p>
+      </div>
+    </div>
+
+    <div class="row" id="panel_row">
+
+      <div class="col-md-4">
+        <ul class="panel" id="panel_1">
+          <li class="title" id="pet_1">Dogs: Lucy</li>
+          <li><button class="btn" id="btn_1">Show Me</button></li>
+          <li> <img id="pic_1" class="photo" src="images/dog.jpg"></li>
+          <li id="pet_info_1">Lucy is a dog who loves kids, chasing frisbees, and visiting the dog park.</li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <ul class="panel" id="panel_2">
+          <li class="title" id="pet_2">Cats: Phineas</li>
+          <li><button class="btn" id="btn_2">Show Me</button></li>
+          <li> <img id="pic_2" class="photo" src="images/cat.jpg"></li>
+          <li id="pet_info_2">Phineas is a quirky, one-person kind of cat who likes a quiet house to explore and food ... plenty of food.</li>
+        </ul>
+      </div>
+  
+      <div class="col-md-4">
+        <ul class="panel" id="panel_3">
+          <li class="title" id="pet_3">Other Furries: Zed</li>
+          <li><button class="btn" id="btn_3">Show Me</button></li>
+          <li> <img id="pic_3" class="photo" src="images/swiss_guinea_pig.jpg"></li><li id="pet_info_3">Zed is a Swiss Teddy Guinea Pig who wants nothing more than to hang out on your lap so that you can bask in his cuteness.</li>
+        </ul>
+      </div>
+
+  </div>
+
+    <p id="note">We've been getting lots of calls about the pets shown in red. Call now to adopt before someone else does!</p>
+    
+  </div>  
+
+  <!-- Your custom jQuery script is linked on the next line. -->
+  <script>
+    $( document ).ready(function() {
+  
+
+     $("#btn_1").click(function(){
+       $("#pic_1").slideToggle();
+        $("#pet_info_1").toggle();
+      });//end btn_1 click
+
+
+      $("#btn_2").click(function(){
+       $("#pic_2").slideToggle();
+       $("#pet_info_2").toggle();
+       $("#panel_2").css("background-color" , "#1AD3F1");
+     });//end btn_2 click
+
+      $("#btn_3").click(function(){ 
+       $("#pic_3").slideToggle();
+       $("#pet_info_3").toggle();
+       $("ul#panel_3").css({ "color": "red", "border" : "red", "border-style" : "solid"});
+      });//end btn_3 click
+   });//end document ready
+  </script>
+
+  </body>
+</html>
