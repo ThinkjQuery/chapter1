@@ -1,23 +1,95 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>404: JS Bin not found</title>
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="http://static.jsbin.com/css/static-page.css?3.25.5">
-  </head>
-  <body>
-    <img id="dave" src="http://static.jsbin.com/images/dave.min.svg?3.25.5" alt="Dave, the JS Bin bot">
-    <div class="wrapper">
-    
-      <h1>This page isn't here :-(</h1>
-      <p>How about heading back to the <a href="http://jsbin.com">homepage</a>
-      instead? It's nice there and there are lots of things to click on.</p>
-      <p>If you think there is supposed to be something here that isn't
-      let us know via the <a href="http://github.com/jsbin/jsbin/issues">Issues page</a>.</p>
-    
-    
-      
-    </div>
-  </body>
-</html>
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+//Theme: Aquablock by Ryan Benedetti
+/*
+
+Lightest: #DEF2F3, Used for text
+Bright Aqua: #78DFED, Used for panel_box background 
+Middle Tone: #1093A7, originally used for left_nav
+Darkest: #24454A, Used for panels
+
+More Green: #589BA4
+More Blue: #1AD3F1, Not used. Only use for highlights or accents
+Slate green: #759FA4
+
+Black is used for some boxes like h2
+White is used for some text
+
+*/
+html{
+   font-family: 'Oswald', sans-serif;
+}
+
+body {
+  background-color: #eeeeee;
+  font-family: 'Oswald', sans-serif;
+  color: #DEF2F3;  
+}
+
+h2{
+  background-color: #000000;
+  padding:1% 2%;
+}
+
+span{
+  color: #78DFED;
+  font-size:0.5em;
+
+}
+
+.container{
+  background: #78DFED;
+}
+
+.top-block{
+   background-color: #1093A7;
+}
+
+.photo{
+  max-width:70%;
+  height:auto;
+  margin: 4%;
+  display:none;
+}
+
+.panel {
+  background: #24454A;
+  list-style-type: none; 
+  padding: 5px;
+  text-align: center;
+}
+
+#panel_row{
+  margin-top: 10px
+}
+
+li.title{
+  font-size: 1.4em;
+  padding-bottom: 0.3em;
+}
+
+.btn{
+  background-color: #D99153;
+  color: #EBDED0;
+}
+
+p#note{
+  color: red;
+}
+
+#pet_info_1, #pet_info_2, #pet_info_3{
+  text-align: left;
+}
+
+#pet_info_1{
+  display:none;
+}
+
+#pet_info_2{
+  display:none;
+}
+
+#pet_info_3{
+  display:none;
+}
+
