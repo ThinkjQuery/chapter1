@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html><head>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <meta charset="utf-8">
+  <title>jQuery goes to DOM-ville</title>
+<link href='http://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>
+<style> 
+	#change_me {
+	position: absolute;
+	top: 200px;
+	left: 40px;
+	font-family: 'Raleway', sans-serif;
+    font-size: 48px}
+  button {
+	padding: 5px;}
+</style>
+</head>
+<body>
+		<button id="button_1">Button 1</button>
+		<button id="button_2">Button 2</button>
+		<button id="button_3">Button 3</button>
+		<button id="button_4">Button 4</button>
+		<button id="button_5">Button 5</button>
+		<div id="change_me">Make Me Do Stuff!</div>
+		<script>
+			$(document).ready(function() {
+			   $("#button_1").click( function() {
+					$("#change_me").animate({top:30},200).animate({top:200},200);
+				});//end button_1
+			   $("#button_2").click( function() {
+					$("#change_me").text("what just happened?");
+			   });//end button_2
+			   $("#button_3").click( function() {
+					$("#change_me").css("color", "purple");
+			   });//end button_3
+			   $("#button_4").click( function() {
+					$("#change_me").prepend("Would you please explain ");
+			   });//end button_4
+			   $("#button_5").click( function() {
+				  	$("#change_me").slideToggle("slow");
+			   });//end button_5
+			});//end doc ready
+		</script>
+</body>
+</html>
