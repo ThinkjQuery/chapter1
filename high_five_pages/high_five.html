@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<title>jQuery High Five</title>
+		<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+		<link rel="stylesheet" type="text/css" href="high_five.css">
+  </head>
+  <body>
+     <button>Click me to change the page</button>
+        <h1>Level 1 Heading.</h1>
+		<h2>Level 2 Heading.</h2>
+		<div>Empty div</div>
+  </body>
+
+		<script>
+			$(document).ready(function() {
+				$("img").hide();
+
+				$("button").click(function(){
+					$("h1" ).text("High five!")
+					$("h1").css("color","midnightblue");
+					$("h2" ).hide();
+					$("h2").text("You changed the page dynamically.")
+					$("h2").fadeIn(5000);
+					$("div").html("<img src='high_five_dog.jpg'>");
+				});
+			});
+		</script>
+
+</html>
